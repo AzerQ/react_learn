@@ -1,6 +1,6 @@
-import {Iproduct} from "../models";
-
-export const products:Iproduct[] = [
+import {IProduct} from "../models";
+// Заглушка данных типа IProduct[]
+export const products:IProduct[] = [
     {
         "id": 1,
         "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",

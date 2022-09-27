@@ -1,23 +1,20 @@
-import React, {createElement as e, useEffect, useState} from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {Product} from "./components/Product";
-import {products} from "./data/products";
+import {Route, Routes} from "react-router-dom";
+import {ProductsPage} from "./pages/ProductsPage";
+import {AboutPage} from "./pages/AboutPage";
+import {Navigation} from "./components/Navigation";
 
 function App() {
-    const [count, setCount] = useState(0);
-    useEffect(()=> {
-        console.log('effect')
-    }, []);
     return (
-        <div className="container mx-auto max-w-2xl pt-5">
-            {
-                products.map(product=> <Product product={product} key={
-                    product.id
-                }/>)
-            }
-        </div>
-    );
+        <>
+            {/*Навигация по ссылкам в приложении*/}
+            <Navigation/>
+            {/*Маршрутизация в приложении*/}
+            <Routes>
+                <Route path="/" element={<ProductsPage/>}/>
+                <Route path="/about" element={<AboutPage/>}/>
+            </Routes>
+        </>
+    )
 }
 
 export default App;

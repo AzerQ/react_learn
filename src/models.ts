@@ -1,4 +1,5 @@
-export interface Iproduct{
+// Интерфейс, отображающий модель данных продукта.
+export interface IProduct{
     price:number;
     id: number;
     title: string;
